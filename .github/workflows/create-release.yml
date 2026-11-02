@@ -3,8 +3,8 @@ name: Create Release
 on:
   push:
     branches:
-      - 'main'
-      - 'master'
+      - main
+      - master
     paths:
       - 'lean-toolchain'
 
@@ -15,8 +15,14 @@ jobs:
     permissions:
       contents: write
     steps:
-    - name: lean-release-tag action
-      uses: leanprover-community/lean-release-tag@v1
-      with:
-        do-release: true
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: lean-release-tag action
+        if: github.event.before != '0000000000000000000000000000000000000000'
+        uses: leanprover-community/lean-release-tag@v1
+        with:
+          do-release: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

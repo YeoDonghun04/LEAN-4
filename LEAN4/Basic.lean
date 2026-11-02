@@ -1,4 +1,4 @@
-import mathlib
+import Mathlib
 
 #check 2 + 2
 

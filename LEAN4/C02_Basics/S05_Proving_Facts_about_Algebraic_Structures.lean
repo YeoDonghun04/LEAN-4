@@ -1,5 +1,5 @@
 module
-public import MIL.Common
+public import LEAN4.Common
 public import Mathlib.Topology.MetricSpace.Basic
 
 section
@@ -110,4 +110,3 @@ example (x y : X) : 0 ≤ dist x y := by
   sorry
 
 end
-

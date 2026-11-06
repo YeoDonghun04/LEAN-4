@@ -1,7 +1,7 @@
 module
 public import Mathlib.Algebra.Ring.Defs
 public import Mathlib.Basic.Real.Basic
-public import MIL.Common
+public import LEAN4.Common
 
 section
 variable (R : Type*) [Ring R]
@@ -144,4 +144,3 @@ theorem mul_inv_rev (a b : G) : (a * b)⁻¹ = b⁻¹ * a⁻¹ := by
 end MyGroup
 
 end
-

@@ -1,6 +1,6 @@
 module
 public import Mathlib.Analysis.SpecialFunctions.Log.Basic
-public import MIL.Common
+public import LEAN4.Common
 
 variable (a b c d e : ℝ)
 open Real
@@ -124,4 +124,3 @@ example : |a*b| ≤ (a^2 + b^2)/2 := by
   sorry
 
 #check abs_le'.mpr
-
